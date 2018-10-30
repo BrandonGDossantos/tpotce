@@ -7,6 +7,6 @@ services:
   filebeat: 
     container_name: filebeat
     restart: always
-    image: "prima/filebeat:6"
+    image: "docker.elastic.co/beats/filebeat:6.4.2"
     volumes:
      - /data/filebeat/config:/usr/share/filebeat
