@@ -1,0 +1,13 @@
+# T-Pot (Standard)
+# For docker-compose ...
+version: '2.1'
+services:
+
+# Filebeat service
+  filebeat:
+    container_name: filebeat
+    stdin_open: true
+    restart: always
+    image: "dtagdevsec/filebeat:1710"
+    volumes:
+     - /data/filebeat/config:/usr/share/filebeat/filebeat.yml 
