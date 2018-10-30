@@ -8,6 +8,6 @@ services:
     container_name: filebeat
     stdin_open: true
     restart: always
-    image: "docker.elastic.co/beats/filebeat:6.4.2"
+    image: "prima/filebeat:6"
     volumes:
      - /data/filebeat/config:/usr/share/filebeat/filebeat.yml 
