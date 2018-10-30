@@ -4,10 +4,9 @@ version: '2.1'
 services:
 
 # Filebeat service
-  filebeat:
+  filebeat: 
     container_name: filebeat
-    stdin_open: true
     restart: always
     image: "prima/filebeat:6"
     volumes:
-     - /data/filebeat/config:/usr/share/filebeat/filebeat.yml 
+     - /data/filebeat/config:/usr/share/filebeat
