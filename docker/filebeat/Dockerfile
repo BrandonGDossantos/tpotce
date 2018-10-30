@@ -1,6 +1,6 @@
 FROM prima/filebeat:6
 
-COPY dist/filebeat.yml /filebeat.yml
+COPY filebeat.yml /usr/share/filebeat/filebeat.yml
 USER root
-RUN chown root:filebeat /filebeat.yml
+RUN chown root:filebeat /usr/share/filebeat/filebeat.yml
 USER filebeat
