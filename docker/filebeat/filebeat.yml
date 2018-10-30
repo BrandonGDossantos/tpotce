@@ -6,11 +6,9 @@ filebeat.prospectors:
 
 - type: log
   paths:
-    - /var/log/syslog
-    - /var/log/mail.log
-    - /var/log/auth.log
+    - /data/cowrie/log/*.log
   fields:
-    log_type: syslog
+    log_type: cowrie
   fields_under_root: true
 
 #========================= Filebeat global options ============================
