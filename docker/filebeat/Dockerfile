@@ -1,6 +1,9 @@
 FROM docker.elastic.co/beats/filebeat:6.4.2
 
-COPY filebeat.yml /usr/share/filebeat/filebeat.yml
+# Include dist
+ADD dist/ /root/dist/
+
 USER root
-RUN chown root:filebeat /usr/share/filebeat/filebeat.yml
+RUN cp /root/dist/filebeat.yml /usr/share/filebeat/filebeat.yml&& \
+    chown root:filebeat /usr/share/filebeat/filebeat.yml
 USER filebeat
