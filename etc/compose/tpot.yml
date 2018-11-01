@@ -1,6 +1,6 @@
 # T-Pot (Standard)
 # For docker-compose ...
-version: '2.2'
+version: '3'
 
 networks:
   cowrie_local:
@@ -15,6 +15,15 @@ networks:
   vnclowpot_local:
 
 services:
+
+# Filebeat service
+  filebeat:
+    build: 
+      context: /opt/tpot/docker/filebeat
+      dockerfile: Dockerfile
+    container_name: filebeat
+    restart: always
+    image: "docker.elastic.co/beats/filebeat:6.4.2"
 
 # Cowrie service
   cowrie:
