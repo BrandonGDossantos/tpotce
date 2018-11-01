@@ -5,9 +5,6 @@ services:
 
 # Filebeat service
   filebeat: 
-    build: 
-      context: /opt/tpot/filebeat/
-      dockerfile: Dockerfile
     container_name: filebeat
     restart: always
     image: "docker.elastic.co/beats/filebeat:6.4.2"
