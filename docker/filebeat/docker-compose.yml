@@ -6,7 +6,7 @@ services:
 # Filebeat service
   filebeat: 
     build: 
-      context: /opt/tpot/etc/docker/filebeat/
+      context: /opt/tpot/filebeat/
       dockerfile: Dockerfile
     container_name: filebeat
     restart: always
