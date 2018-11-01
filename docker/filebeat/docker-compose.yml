@@ -5,7 +5,7 @@ services:
 
 # Filebeat service
   filebeat:
-      build: 
+    build: 
       context: /opt/tpot/filebeat/
       dockerfile: Dockerfile
     container_name: filebeat
