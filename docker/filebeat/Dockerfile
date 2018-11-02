@@ -7,4 +7,4 @@ RUN chmod a-w /usr/share/filebeat/filebeat.yml
 # Start cowrie
 WORKDIR /usr/share/filebeat
 USER filebeat
-CMD ["/usr/share/filebeat", "-e", "-c", "filebeat.yml"]
+CMD ["/usr/local/bin/filebeat", "-e", "-c", "/usr/share/filebeat/filebeat.yml"]
