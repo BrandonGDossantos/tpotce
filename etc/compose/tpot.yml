@@ -16,15 +16,6 @@ networks:
 
 services:
 
-# Filebeat service
-  filebeat:
-    build: 
-      context: /opt/tpot/docker/filebeat
-      dockerfile: Dockerfile
-    container_name: filebeat
-    restart: always
-    image: "docker.elastic.co/beats/filebeat:6.4.2"
-
 # Cowrie service
   cowrie:
     container_name: cowrie
