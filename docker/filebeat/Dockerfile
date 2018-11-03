@@ -4,7 +4,6 @@ USER root
 COPY dist/filebeat.yml /usr/share/filebeat/filebeat.yml
 RUN chmod a-w /usr/share/filebeat/filebeat.yml
 
-# Start cowrie
 WORKDIR /usr/share/filebeat
 USER filebeat
 CMD ["filebeat", "-e", "-c", "filebeat.yml"]
