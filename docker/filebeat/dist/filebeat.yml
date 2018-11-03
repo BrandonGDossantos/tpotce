@@ -7,6 +7,62 @@ filebeat.inputs:
     log_type: cowrie
   fields_under_root: true
 
+- type: log
+  enabled: true
+  paths:
+    - /data/dionaea/log/*.log
+  fields:
+    log_type: dionaea
+  fields_under_root: true
+
+- type: log
+  enabled: true
+  paths:
+    - /data/elasticpot/log/*.log
+  fields:
+    log_type: elasticpot
+  fields_under_root: true
+
+- type: log
+  enabled: true
+  paths:
+    - /data/glastopf/log/*.log
+  fields:
+    log_type: glastopf
+  fields_under_root: true
+
+- type: log
+  enabled: true
+  paths:
+    - /data/honeytrap/log/*.log
+  fields:
+    log_type: honeytrap
+  fields_under_root: true
+
+- type: log
+  enabled: true
+  paths:
+    - /data/mailoney/log/*.log
+  fields:
+    log_type: mailoney
+  fields_under_root: true
+
+- type: log
+  enabled: true
+  paths:
+    - /data/rdpy/log/*.log
+  fields:
+    log_type: rdpy
+  fields_under_root: true
+
+- type: log
+  enabled: true
+  paths:
+    - /data/vnclowpot/log/*.log
+  fields:
+    log_type: vnclowpot
+  fields_under_root: true
+
 output.elasticsearch:
   hosts: ["172.31.47.13:64298"]
   protocol: "https"
