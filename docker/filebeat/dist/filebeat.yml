@@ -8,4 +8,4 @@ filebeat.inputs:
   fields_under_root: true
 
   output.elasticsearch:
-  hosts: ["myEShost:6969"]
+  hosts: ["172.31.47.13:9200"]
